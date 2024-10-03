@@ -1,0 +1,82 @@
+.container{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.notes-group{
+    height: 100%;
+    width: 30%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    
+}
+.notes{
+    height: 100vh;
+    width: 100%;
+    background-color: #DAE5F5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.home-image img{
+    height: 300px;
+    width: 600px;
+    margin-top: 100px;
+}
+
+.notes h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 58.59px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.notes p{
+    height: auto;
+    width: 57.9%;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    text-align: left; 
+    color: #292929;  
+    margin-top: 10px; 
+    text-wrap: wrap;
+}
+.lock{
+    margin-top: auto;
+    padding-top: 10px;
+}
+.lock img{
+    height: 1rem;
+    width: 0.8rem;
+}
+.lock span{
+    margin-left: 5px;
+    color: #292929;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-align: left;   
+}
+.add {
+    position: absolute;
+    height: 5.5vw; 
+    width: 5.5vw;
+    background-color: #16008B;
+    border-radius: 50%; 
+    left: 16vw; 
+    top: 82vh; 
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+
+.add img {
+    height: auto;
+    width: 70%; 
+    padding-left: 29%; 
+    padding-top: 26%; 
+}

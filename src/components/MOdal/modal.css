@@ -1,0 +1,123 @@
+
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+.input{
+    display: flex;
+    gap: 5%;
+}
+.choose-color{
+    display: flex;
+    gap: 5%;
+}
+.color{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin-top: 14px;
+    height: 50px;
+    width: 50%;
+}
+
+
+.color-1{
+    height: 30px;
+    width: 30px;
+    background-color: #B38BFA;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.color-2{
+    height: 30px;
+    width: 30px;
+    background-color: #FF79F2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.color-3{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #43E6FC;
+    cursor: pointer;
+}
+.color-4{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #F19576;
+    cursor: pointer;
+}
+.color-5{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #0047FF;
+    cursor: pointer;
+}
+.color-6{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #6691FF;
+    cursor: pointer;
+}
+.modal-container > p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 46.45px;
+    letter-spacing: 0.035em;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+.input > h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 43.75px;
+    letter-spacing: 0.035em;
+    padding-left: 35px;
+    padding-top: 4px;  
+}
+.input > input{
+    height: 70%;
+    color: #979797;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 36.84px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    margin-top: 8px;
+    padding-left: 10px;
+    padding-right: 90px;
+    border: 2px solid #CCCCCC;
+    border-radius: 22px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.choose-color > p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 43.75px;
+    letter-spacing: 0.035em;
+    padding-left: 35px;
+    padding-top: 16px;  
+}
+.create-btn > button{
+    color: #ffffff;
+    background-color: #001F8B;
+    margin-top: 25px;
+    margin-left: 430px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}

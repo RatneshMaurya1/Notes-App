@@ -6,15 +6,60 @@ import { useState } from "react";
 import Modal from "../MOdal/Modal";
 
 const Main = () => {
+  const [group,setGroup] = useState([])
   const [showModal, setShowModal] = useState(false);
+  const [groupName,setGroupName] = useState("")
+  const [color,setColor] = useState("")
 
-    const closeModel = () => setShowModal(false);
+  function upperCase(groupName){
+    const name = groupName.trim().split(" ")
+    if(name.length > 1){
+      return name[0][0].toUpperCase() + name[1][0].toUpperCase()
+    }
+    console.log(name)
+    if(name.length === 1){
+      return name[0][0].toUpperCase()
+    }    
+  }
+  function capitalFirstLetter(str){
+    return str.trim().split().map(word => word.charAt(0).toUpperCase()+ word.slice(1)).join(" ")
+  }
+  const capitalLetter = capitalFirstLetter(groupName)
+  
+function createGroup(){
+  if(!groupName || !color){
+    return alert("GroupName and Color required")
+  }
+
+  const addItem = {
+    name:capitalLetter,
+    color:color,
+    upperCase: upperCase(groupName)
+  }
+  setGroup([...group,addItem])
+
+  setGroupName("")
+  setColor("")
+  setShowModal(false)
+}
 
   return (
     <>
       <div className="container" >
         <div className="notes-group">
           <h1>Pocket Notes</h1>
+          {
+            group.map((group) => (
+              <div className="group" key={group.name}>
+                <div className="group-icon" style={{backgroundColor:group.color}}>
+                     <p>{group.upperCase}</p>
+                </div>
+                <div className="group-name">
+                    <p>{group.name}</p>
+                </div>
+            </div>
+            ))
+          }
         </div>
 
         <div className="notes">
@@ -39,7 +84,12 @@ const Main = () => {
         <>
           <div className="overlay" onClick={() => setShowModal(false)}></div>
         <div className="modal" >
-          <Modal />
+          <Modal 
+          groupName = {groupName}
+          setGroupName = {setGroupName}
+          setColor={setColor}
+          createGroup={createGroup}
+          />
         </div>
         </>
       )}

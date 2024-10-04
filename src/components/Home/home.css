@@ -6,6 +6,9 @@
 .notes-group{
     height: 100%;
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     text-align: center;
     margin-top: 50px;
     font-size: 1.1rem;
@@ -63,9 +66,9 @@
     text-align: left;   
 }
 .add {
-    position: absolute;
-    height: 5.5vw; 
-    width: 5.5vw;
+    position: fixed;
+    height: 80px; 
+    width: 80px;
     background-color: #16008B;
     border-radius: 50%; 
     left: 16vw; 
@@ -79,4 +82,30 @@
     width: 70%; 
     padding-left: 29%; 
     padding-top: 26%; 
+}
+.group{
+    display: flex;
+    padding-left: 40px;
+    gap: 20px;
+    align-items: center;
+}
+.group-icon{
+    height: 50px;
+    width: 50px;
+    color: #ffffff;
+    background-color: #0047FF;
+    border-radius: 50%;
+    padding-top: 13px;
+}
+.group-icon > p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.45px;
+    letter-spacing: 0.02em;
+}
+.group-name{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28.13px;
+    letter-spacing: 0.02em;
 }

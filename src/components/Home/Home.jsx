@@ -1,15 +1,16 @@
 import "./home.css";
-import home_image from "../../assets/home-image.png";
-import lock_image from "../../assets/lock.png";
 import plus_image from "../../assets/plus.png";
 import { useState } from "react";
 import Modal from "../MOdal/Modal";
+import Notes from "../Notes/Notes";
+import Default from "../default/Default";
 
 const Main = () => {
   const [group,setGroup] = useState([])
   const [showModal, setShowModal] = useState(false);
   const [groupName,setGroupName] = useState("")
   const [color,setColor] = useState("")
+  const [showNotes,setShowNotes] = useState(false)
 
   function upperCase(groupName){
     const name = groupName.trim().split(" ")
@@ -48,9 +49,10 @@ function createGroup(){
       <div className="container" >
         <div className="notes-group">
           <h1>Pocket Notes</h1>
+          <div className="scroll">
           {
             group.map((group) => (
-              <div className="group" key={group.name}>
+              <div className="group" key={group.name} onClick={() => setShowNotes(true)}>
                 <div className="group-icon" style={{backgroundColor:group.color}}>
                      <p>{group.upperCase}</p>
                 </div>
@@ -60,22 +62,11 @@ function createGroup(){
             </div>
             ))
           }
-        </div>
-
-        <div className="notes">
-          <div className="home-image">
-            <img src={home_image} alt="home_image" />
-          </div>
-          <h1>Pocket Notes</h1>
-          <p>
-            Send and receive messages without keeping your phone online. Use
-            Pocket Notes on up to 4 linked devices and 1 mobile phone
-          </p>
-          <div className="lock">
-            <img src={lock_image} alt="lock-image" />
-            <span>end-to-end encrypted</span>
           </div>
         </div>
+        {
+        showNotes ? <Notes/> : <Default />
+         }
         <div className="add" onClick={() => setShowModal(true)}>
           <img src={plus_image} alt="" />
         </div>

@@ -67,7 +67,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap:10px;
 }
 .lock{
     margin-top: auto;
@@ -104,10 +104,16 @@
 }
 .group{
     display: flex;
-    padding-left: 40px;
+    padding-left: 12%;
     gap: 20px;
     align-items: center;
     max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 16px;
+}
+.group.selected{
+    background-color: #2F2F2F2B;
 }
 .group-icon{
     height: 50px;
@@ -134,7 +140,7 @@
     font-weight: 600;
     line-height: 28.13px;
     letter-spacing: 0.02em;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;

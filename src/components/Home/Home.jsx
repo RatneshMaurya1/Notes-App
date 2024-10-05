@@ -1,16 +1,17 @@
 import "./home.css";
 import plus_image from "../../assets/plus.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../MOdal/Modal";
 import Notes from "../Notes/Notes";
 import Default from "../default/Default";
 
 const Main = () => {
-  const [group,setGroup] = useState([])
+  const [group,setGroup] = useState(JSON.parse(localStorage.getItem("group")) || [])
   const [showModal, setShowModal] = useState(false);
   const [groupName,setGroupName] = useState("")
   const [color,setColor] = useState("")
   const [showNotes,setShowNotes] = useState(false)
+  const [selectedClass,setSelectedClass] = useState()
 
   function upperCase(groupName){
     const name = groupName.trim().split(" ")
@@ -44,6 +45,9 @@ function createGroup(){
   setShowModal(false)
 }
 
+useEffect(() => {
+  localStorage.setItem("group",JSON.stringify(group))
+},[group])
   return (
     <>
       <div className="container" >
@@ -52,7 +56,7 @@ function createGroup(){
           <div className="scroll">
           {
             group.map((group) => (
-              <div className="group" key={group.name} onClick={() => setShowNotes(true)}>
+              <div className={`group ${selectedClass === group ? "selected" : ""}`} key={group.name}  onClick={() => {setShowNotes(true); setSelectedClass(group)}}>
                 <div className="group-icon" style={{backgroundColor:group.color}}>
                      <p>{group.upperCase}</p>
                 </div>
@@ -65,7 +69,7 @@ function createGroup(){
           </div>
         </div>
         {
-        showNotes ? <Notes/> : <Default />
+        showNotes ? <Notes group={selectedClass}/> : <Default />
          }
         <div className="add" onClick={() => setShowModal(true)}>
           <img src={plus_image} alt="" />

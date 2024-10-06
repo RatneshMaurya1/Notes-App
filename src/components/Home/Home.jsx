@@ -36,7 +36,8 @@ function createGroup(){
   const addItem = {
     name:capitalLetter,
     color:color,
-    upperCase: upperCase(groupName)
+    upperCase: upperCase(groupName),
+    notes:[]
   }
   setGroup([...group,addItem])
 
@@ -69,7 +70,7 @@ useEffect(() => {
           </div>
         </div>
         {
-        showNotes ? <Notes group={selectedClass}/> : <Default />
+        showNotes ? <Notes group={selectedClass} setGroup={setGroup}/> : <Default />
          }
         <div className="add" onClick={() => setShowModal(true)}>
           <img src={plus_image} alt="" />

@@ -1,8 +1,6 @@
-import { useState } from "react"
 import "./modal.css"
 
 const Modal = ({groupName,setGroupName,setColor,createGroup}) =>{
-    const [input, setInput] = useState("")
 
     return(
         <div className="modal-container" >

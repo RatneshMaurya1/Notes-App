@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Main from './components/Home/Home'
+import Home from './components/Home/Home'
 
 
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <Main/>
+    <Home/>
     </>
   )
 }

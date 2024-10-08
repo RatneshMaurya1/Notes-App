@@ -5,7 +5,7 @@ import Modal from "../Modal/Modal";
 import Notes from "../Notes/Notes";
 import Default from "../default/Default";
 
-const Main = () => {
+const Home = () => {
   const [group, setGroup] = useState(
     JSON.parse(localStorage.getItem("group")) || []
   );
@@ -15,7 +15,7 @@ const Main = () => {
   const [showNotes, setShowNotes] = useState(false);
   const [selectedClass, setSelectedClass] = useState(null);
   const [showGroup, setShowGroup] = useState(true);
-  
+
   function upperCase(groupName) {
     const name = groupName.trim().split(" ");
     if (name.length > 1) {
@@ -152,4 +152,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

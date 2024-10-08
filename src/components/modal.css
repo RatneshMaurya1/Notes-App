@@ -125,6 +125,9 @@
     line-height: 27.23px;
     letter-spacing: 0.035em;
     text-align: center;
+    display: block;
+    /* width: 40%; */
+    max-width: 250px;
     
 }
 @media (max-width:600px) {
@@ -132,7 +135,7 @@
         width: 350px;
     }
     .modal-container > p{
-        font-size: 1.3rem;
+        font-size: 16px;
     }
     .input > input{
         height: 40%;

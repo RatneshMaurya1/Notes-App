@@ -2,7 +2,10 @@
     display: flex;
     height: 100vh;
     box-sizing: border-box;
+    position: relative;
+
 }
+
 
 .notes-group{
     width: 30%;
@@ -15,9 +18,8 @@
     font-weight: 500;
     letter-spacing: 0.02em;
     overflow: hidden;
-    position: relative;
-    
 }
+
 
 .notes-group h1 {
     position: sticky;
@@ -146,4 +148,65 @@
     max-width: 100%;
     display: block;
     cursor: pointer;
+}
+@media (max-width:1300px){
+    .add{
+        left: 15%;
+    }
+    .notes-group{
+        width: 400PX;
+    }
+}
+@media (max-width:1124px){
+    .add{
+        left: 17%;
+    }
+    .notes-group{
+        width: 400PX;
+    }
+}
+@media (max-width:1024px){
+    .add{
+        left: 17%;
+    }
+    .notes-group{
+        width: 400PX;
+    }
+}
+@media (max-width:950px){
+    .add{
+        left: 24%;
+    }
+    .notes-group{
+        width: 500PX;
+    }
+}
+@media (max-width:768px){
+    .add{
+        left: 28%;
+    }
+    .notes-group{
+        width: 550PX;
+    }
+}
+@media (max-width:650px){
+    .notes{
+        display: none;
+    }
+    .notes-group{
+        width: 100%;
+    }
+    .add{
+        left: 80%;
+    }
+}
+@media (max-width:500px){
+    .add{
+        left: 75%;
+    }
+}
+@media (max-width:450px){
+    .add{
+        left: 70%;
+    }
 }

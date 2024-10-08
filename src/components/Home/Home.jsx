@@ -1,9 +1,9 @@
 import "./home.css";
 import plus_image from "../../assets/plus.png";
 import { useEffect, useState } from "react";
-import Modal from "../Modal/Modal";
 import Notes from "../Notes/Notes";
 import Default from "../default/Default";
+import Modal from "../Modal/Modal";
 
 const Home = () => {
   const [group, setGroup] = useState(

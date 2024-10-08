@@ -3,7 +3,7 @@ import plus_image from "../../assets/plus.png";
 import { useEffect, useState } from "react";
 import Notes from "../Notes/Notes";
 import Default from "../default/Default";
-// import Modal from "../Modal/Modal";
+import Modal from "../Modal";
 
 const Home = () => {
   const [group, setGroup] = useState(
@@ -21,7 +21,6 @@ const Home = () => {
     if (name.length > 1) {
       return name[0][0].toUpperCase() + name[1][0].toUpperCase();
     }
-    console.log(name);
     if (name.length === 1) {
       return name[0][0].toUpperCase();
     }
@@ -37,7 +36,7 @@ const Home = () => {
 
   function createGroup() {
     if (!groupName || !color) {
-      return alert("GroupName and Color required");
+      return alert("GroupName and Color are required");
     }
 
     const addItem = {
@@ -133,7 +132,7 @@ const Home = () => {
             <img src={plus_image} alt="" />
           </div>
         )}
-{/* 
+
         {showModal && (
           <>
             <div className="overlay" onClick={() => setShowModal(false)}></div>
@@ -146,7 +145,7 @@ const Home = () => {
               />
             </div>
           </>
-        )} */}
+        )}
       </div>
     </>
   );

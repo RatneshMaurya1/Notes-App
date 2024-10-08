@@ -3,7 +3,7 @@ import plus_image from "../../assets/plus.png";
 import { useEffect, useState } from "react";
 import Notes from "../Notes/Notes";
 import Default from "../default/Default";
-import Modal from "../Modal/Modal";
+// import Modal from "../Modal/Modal";
 
 const Home = () => {
   const [group, setGroup] = useState(
@@ -133,7 +133,7 @@ const Home = () => {
             <img src={plus_image} alt="" />
           </div>
         )}
-
+{/* 
         {showModal && (
           <>
             <div className="overlay" onClick={() => setShowModal(false)}></div>
@@ -146,7 +146,7 @@ const Home = () => {
               />
             </div>
           </>
-        )}
+        )} */}
       </div>
     </>
   );

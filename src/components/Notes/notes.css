@@ -153,11 +153,4 @@ textarea::placeholder{
     .back-btn{
         display: flex;
     } 
-    .notes-container{
-        height: 100%;
-    }
-    .footer{
-        height: auto;
-    }
-    
 }

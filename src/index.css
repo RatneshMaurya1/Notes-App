@@ -4,12 +4,12 @@
   box-sizing: border-box;
   font-family: Roboto;
 }
-html{
+html,body{
   height: -webkit-fill-available;
+  height: 100%;
+  width: 100%;
 }
-body{
-  height: -webkit-fill-available;
-}
+
 .overlay {
   position: fixed;
   top: 0;

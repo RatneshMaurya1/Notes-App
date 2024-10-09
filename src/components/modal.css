@@ -133,6 +133,7 @@
 @media (max-width:600px) {
     .modal-container{
         width: 350px;
+        height: auto;
     }
     .modal-container > p{
         font-size: 16px;
@@ -168,6 +169,7 @@
         padding-left: 90px;
         padding-right: 90px;
         border-radius: 7px;
+        margin-bottom: 10px;
     }
 }
 @media (max-width:400px){

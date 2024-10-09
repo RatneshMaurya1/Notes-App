@@ -83,6 +83,7 @@
     letter-spacing: 0.035em;
     padding-left: 35px;
     padding-top: 4px;  
+    word-wrap: nowrap;
 }
 .input > input{
     height: 70%;
@@ -142,8 +143,8 @@
         height: 40%;
         padding-right: 15px;
         font-size: 0.8rem;
-        padding-top: 13px;
-        padding-bottom: 13px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .input > h2{
         font-size: 1.1rem;

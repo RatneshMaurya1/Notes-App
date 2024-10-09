@@ -15,32 +15,41 @@ const Notes = ({ group, setGroup,backGroup }) => {
 
   function addText() {
     if (text.trim() === "") return;
-
+  
     const getDateandTime = new Date();
-    const getDate = getDateandTime.toLocaleDateString();
-    const getTime = getDateandTime.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"});
-
+    
+    const getDate = getDateandTime.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    });
+  
+    const getTime = getDateandTime.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  
     const newNote = {
       text: text,
       notesTime: getTime,
       notesDate: getDate,
     };
-
+  
     const updatedNotes = [...notes, newNote];
     setNotes(updatedNotes);
-
+  
     const updatedGroup = {
       ...group,
       notes: updatedNotes,
     };
-
+  
     setGroup((prevGroups) =>
       prevGroups.map((g) => (g.name === group.name ? updatedGroup : g))
     );
-
+  
     setText("");
   }
-
+  
   return (
     <div className="notes-container">
       <header className="header">

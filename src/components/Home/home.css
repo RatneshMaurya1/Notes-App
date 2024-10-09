@@ -1,9 +1,8 @@
 .container{
     display: flex;
-    height: 100vh;
+    height: 100svh;
     box-sizing: border-box;
     position: relative;
-
 }
 
 
